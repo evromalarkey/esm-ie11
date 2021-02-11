@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="cs">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <style>
+            .transition-fade {
+                transition: 0.4s;
+                opacity: 1;
+            }
+
+            html.is-animating .transition-fade {
+                opacity: 0;
+            }
+
+            /*! locomotive-scroll v3.3.9 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+            html.has-scroll-smooth {
+                overflow: hidden; }
+
+            html.has-scroll-dragging {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none; }
+
+            .has-scroll-smooth body {
+                overflow: hidden; }
+
+            .has-scroll-smooth [data-scroll-container] {
+                min-height: 100vh; }
+
+            .c-scrollbar {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 11px;
+                height: 100vh;
+                transform-origin: center right;
+                transition: transform 0.3s, opacity 0.3s;
+                opacity: 0; }
+            .c-scrollbar:hover {
+                transform: scaleX(1.45); }
+            .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+                opacity: 1; }
+
+            .c-scrollbar_thumb {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: black;
+                opacity: 0.5;
+                width: 7px;
+                border-radius: 10px;
+                margin: 2px;
+                cursor: -webkit-grab;
+                cursor: grab; }
+            .has-scroll-dragging .c-scrollbar_thumb {
+                cursor: -webkit-grabbing;
+                cursor: grabbing; }
+        </style>
+    </head>
+    <body>
+        <main data-scroll-container>
+            <div id="swup" class="transition-fade">
+                <div data-scroll-section>
+                    <a href="/dist/index.html">Go to homepage</a>
+                    <h1>This is other page</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <div data-controller="dropdown">
+                        <input type="text" data-ref="dropdown.input">
+                        <button data-action="click->dropdown#greet" data-tippy-content="Tooltip">Show tippy</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            typeof String.prototype.matchAll === "undefined" ? document.write('<script src="js/main.legacy.js"><\/script>') : document.write('<script src="js/main.js" type="module"><\/script>')
+        </script>
+    </body>
+</html>

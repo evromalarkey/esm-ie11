@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="cs">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <style>
+            .transition-fade {
+                transition: 0.4s;
+                opacity: 1;
+            }
+
+            html.is-animating .transition-fade {
+                opacity: 0;
+            }
+
+            /*! locomotive-scroll v3.3.9 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+            html.has-scroll-smooth {
+                overflow: hidden; }
+
+            html.has-scroll-dragging {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none; }
+
+            .has-scroll-smooth body {
+                overflow: hidden; }
+
+            .has-scroll-smooth [data-scroll-container] {
+                min-height: 100vh; }
+
+            .c-scrollbar {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 11px;
+                height: 100vh;
+                transform-origin: center right;
+                transition: transform 0.3s, opacity 0.3s;
+                opacity: 0; }
+            .c-scrollbar:hover {
+                transform: scaleX(1.45); }
+            .c-scrollbar:hover, .has-scroll-scrolling .c-scrollbar, .has-scroll-dragging .c-scrollbar {
+                opacity: 1; }
+
+            .c-scrollbar_thumb {
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: black;
+                opacity: 0.5;
+                width: 7px;
+                border-radius: 10px;
+                margin: 2px;
+                cursor: -webkit-grab;
+                cursor: grab; }
+            .has-scroll-dragging .c-scrollbar_thumb {
+                cursor: -webkit-grabbing;
+                cursor: grabbing; }
+        </style>
+    </head>
+    <body>
+        <main data-scroll-container>
+            <div id="swup" class="transition-fade">
+                <div data-scroll-section>
+                    <a href="/dist/page.html">Go to other page</a>
+                    <h1>This is homepage</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                    <div data-controller="dropdown">
+                        <input type="text" data-ref="dropdown.input">
+                        <button data-action="click->dropdown#greet" data-tippy-content="Tooltip">Show tippy</button>
+                    </div>
+                </div>
+                <div data-scroll-section>
+                    <h1 data-scroll>Hey</h1>
+                    <p data-scroll>👋</p>
+                </div>
+                <div data-scroll-section>
+                    <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+                    <p data-scroll data-scroll-speed="2">😬</p>
+                </div>
+                <div data-scroll-section>
+                    <h1 data-scroll>Hey</h1>
+                    <p data-scroll>👋</p>
+                </div>
+                <div data-scroll-section>
+                    <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+                    <p data-scroll data-scroll-speed="2">😬</p>
+                </div>
+                <div data-scroll-section>
+                    <h1 data-scroll>Hey</h1>
+                    <p data-scroll>👋</p>
+                </div>
+                <div data-scroll-section>
+                    <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+                    <p data-scroll data-scroll-speed="2">😬</p>
+                </div>
+                <div data-scroll-section>
+                    <h1 data-scroll>Hey</h1>
+                    <p data-scroll>👋</p>
+                </div>
+                <div data-scroll-section>
+                    <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+                    <p data-scroll data-scroll-speed="2">😬</p>
+                </div>
+                <div data-scroll-section>
+                    <h1 data-scroll>Hey</h1>
+                    <p data-scroll>👋</p>
+                </div>
+                <div data-scroll-section>
+                    <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+                    <p data-scroll data-scroll-speed="2">😬</p>
+                </div>
+                <div data-scroll-section>
+                    <h1 data-scroll>Hey</h1>
+                    <p data-scroll>👋</p>
+                </div>
+                <div data-scroll-section>
+                    <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+                    <p data-scroll data-scroll-speed="2">😬</p>
+                </div>
+                <div data-scroll-section>
+                    <h1 data-scroll>Hey</h1>
+                    <p data-scroll>👋</p>
+                </div>
+                <div data-scroll-section>
+                    <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+                    <p data-scroll data-scroll-speed="2">😬</p>
+                </div>
+                <div data-scroll-section>
+                    <h1 data-scroll>Hey</h1>
+                    <p data-scroll>👋</p>
+                </div>
+                <div data-scroll-section>
+                    <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+                    <p data-scroll data-scroll-speed="2">😬</p>
+                </div>
+                <div data-scroll-section>
+                    <h1 data-scroll>Hey</h1>
+                    <p data-scroll>👋</p>
+                </div>
+                <div data-scroll-section>
+                    <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+                    <p data-scroll data-scroll-speed="2">😬</p>
+                </div>
+                <div data-scroll-section>
+                    <h1 data-scroll>Hey</h1>
+                    <p data-scroll>👋</p>
+                </div>
+                <div data-scroll-section>
+                    <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+                    <p data-scroll data-scroll-speed="2">😬</p>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/es-module-shims@0.7.1/dist/es-module-shims.min.js"></script>
+        <script type="importmap-shim">
+        {
+          "imports": {
+            "stimulus": "https://cdn.jsdelivr.net/npm/stimulus@2.0.0/+esm",
+            "locomotive-scroll": "https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/+esm",
+            "swup": "https://cdn.esm.sh/swup@2.0.13/esnext/swup.js",
+            "tippy.js": "https://cdn.esm.sh/tippy.js@6.2.7/esnext/tippy.js.js",
+            "vanillajs-datepicker": "https://cdn.esm.sh/vanillajs-datepicker@1.0.3/esnext/vanillajs-datepicker.js",
+            "dayjs": "https://cdn.esm.sh/dayjs@1.10.4/esnext/dayjs.js",
+            "dayjs/": "https://cdn.esm.sh/dayjs@1.10.4/esnext/"
+          }
+        }
+        </script>
+        <script>
+            typeof String.prototype.matchAll === "undefined" ? document.write('<script src="js/main.legacy.js"><\/script>') : document.write('<script src="../src/js/main.js" type="module-shim"><\/script>')
+        </script>
+    </body>
+</html>
